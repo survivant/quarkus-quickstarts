@@ -37,6 +37,6 @@ Additionally, `freetype-devel` and `fontconfig` libraries must be installed.
 
 # What the result looks like
 
-This is an example of what this quick start does to an image:
+This is an example of what this quickstart does to an image:
 
 ![Alt text](./doc/example.png)

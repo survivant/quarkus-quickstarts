@@ -15,7 +15,7 @@ It follows the instructions from the getting started guide, but also contains so
 Follow these [instructions](https://support.google.com/mail/answer/185833) to create the password. 
 
 2. You need Java 11+.
-3. You need GraalVM and `native-image` installed and configured. Follows the [instructions](https://quarkus.io/guides/building-native-image) to download, install, and configure GraalVM.
+3. You need GraalVM and `native-image` installed and configured. Follow the [instructions](https://quarkus.io/guides/building-native-image) to download, install, and configure GraalVM.
 
 ## Building the application
 
@@ -31,7 +31,7 @@ Generate the native executable using:
 > ./mvnw package -Dnative
 ```
 
-The application contains tests that used the _mock_ mailer to avoid sending actual emails during the tests.
+The application contains tests that use the _mock_ mailer to avoid sending actual emails during the tests.
 The dev mode also uses this _mock_ mailer.
 
 ## Configuring the application

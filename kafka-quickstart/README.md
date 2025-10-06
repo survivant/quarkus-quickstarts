@@ -6,7 +6,7 @@ This project illustrates how Quarkus applications can interact with Apache Kafka
 ## Start the application
 
 The application is composed of two applications communicating through Kafka.
-Interactions with Kafka is managed by MicroProfile Reactive Messaging.
+Interactions with Kafka are managed by MicroProfile Reactive Messaging.
 
 They can be started in dev mode using:
 
@@ -31,7 +31,7 @@ The application is composed of the following components:
 
 #### Producer
 
-The _producer_ application receive requests from the user (via HTTP) and sends _quote requests_ to the Kafka broker.
+The _producer_ application receives requests from the user (via HTTP) and sends _quote requests_ to the Kafka broker.
 Two main components compose the application:
 
 * `QuoteProducer` generates uniquely identified quote requests and sends them to the Kafka topic `quote-requests`.

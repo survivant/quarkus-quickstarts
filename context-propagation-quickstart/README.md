@@ -51,7 +51,7 @@ Then run, from any terminal:
 
 > http :8080/prices/all
 
-It should display the persisted prices. These prices are only persisted when the streams completes (so after having received 3 prices).
+It should display the persisted prices. These prices are only persisted when the stream completes (so after having received 3 prices).
 
 ### Run Quarkus as a native application
 

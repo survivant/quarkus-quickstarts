@@ -1,6 +1,6 @@
 # Generating the certificates and keys
 
-The ca is self-signed:
+The CA is self-signed:
 ----------------------
 
 ```bash
@@ -27,7 +27,7 @@ openssl x509 -req -CA ca.pem -CAkey ca.key -CAcreateserial -in client.csr \
   -out client.pem -days 3650
 ```
 
-server is issued by CA with a special config for subject alternative names:
+Server is issued by CA with a special config for subject alternative names:
 ----------------------------------------------------------------------------
 
 ```bash

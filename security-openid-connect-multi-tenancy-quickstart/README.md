@@ -1,8 +1,8 @@
 # Supporting Multi-Tenancy in OpenID Connect Applications
 
-This guide demonstrates how your OpenID Connect application can support multi-tenancy so that you can serve multiple tenants from a single application. Tenants can be distinct realms or security domains within a same OpenID Provider or even distinct OpenID Providers.
+This guide demonstrates how your OpenID Connect application can support multi-tenancy so that you can serve multiple tenants from a single application. Tenants can be distinct realms or security domains within the same OpenID Provider or even distinct OpenID Providers.
 
-When serving multiple customers from a same application (e.g.: SaaS), each customer is a tenant. By enabling multi-tenancy support to your applications you are allowed to also support distinct authentication policies for each tenant even though if that means authenticating against different OpenID Providers, such as Keycloak and Google.
+When serving multiple customers from the same application (e.g.: SaaS), each customer is a tenant. By enabling multi-tenancy support to your applications, you can also support distinct authentication policies for each tenant even if that means authenticating against different OpenID Providers, such as Keycloak and Google.
 
 ## Requirements
 
@@ -39,7 +39,7 @@ You should be able to access your Keycloak Server at [http://localhost:8180/auth
 Log in as the `admin` user to access the Keycloak Administration Console.
 Username should be `admin` and password `admin`.
 
-Now, follow the steps below to important the realms for the two tenants:
+Now, follow the steps below to import the realms for the two tenants:
 
 * Import the [config/default-tenant-realm.json](config/default-tenant-realm.json) to create the default realm
 * Import the [config/tenant-a-realm.json](config/tenant-a-realm.json) to create the realm for the tenant `tenant-a`.
@@ -73,7 +73,7 @@ If you try now to access the application at the following URL:
 
 * [http://localhost:8080/tenant-a](http://localhost:8080/tenant-a)
 
-You should be redirect again to the login page at Keycloak. However, now you are going to authenticate using a different `realm`.
+You should be redirected again to the login page at Keycloak. However, now you are going to authenticate using a different `realm`.
 
 In both cases, if the user is successfully authenticated, the landing page will show the user's name and e-mail. Even though the
 user `alice` exists in both tenants, for the application they are distinct users belonging to different realms/tenants.

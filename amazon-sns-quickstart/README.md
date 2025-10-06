@@ -22,7 +22,7 @@ curl -XPOST -H'Content-type: application/json' http://localhost:8080/async/canno
 curl -XPOST -H'Content-type: application/json' http://localhost:8080/async/cannon/shoot -d'{"flavor": "Down", "spin": "1/2"}'
 ```
 
-And observe logs that both endpoints (sync & async) receives published messages
+And observe logs that both endpoints (sync & async) receive published messages
 
 ```log
 2020-05-13 11:34:02,366 INFO  [org.acm.sns.QuarksShieldSyncResource] (executor-thread-31) Quark[Charm, 1/2] collision with the shield.
@@ -220,7 +220,7 @@ For more information, see:
  - [Sign up for AWS and Create an IAM User](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/signup-create-iam-user.html)
  - [Set Up AWS Credentials and Region for Development](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/setup-credentials.html)
 
-Create a topic using AWS CLI and store the generated ARN in an environment variable as we will need to provide it to the our app:
+Create a topic using AWS CLI and store the generated ARN in an environment variable as we will need to provide it to our app:
 
 ```sh
 TOPIC_ARN=`aws sns create-topic --name=QuarksCollider`

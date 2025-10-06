@@ -41,7 +41,7 @@ Default output format [None]:
 
 ## Create bucket
 
-Create a S3 bucket using AWS CLI and the localstack profile.
+Create an S3 bucket using AWS CLI and the localstack profile.
 
 ```sh
 aws s3 mb s3://quarkus.s3.quickstart --profile localstack --endpoint-url=http://localhost:4566`
@@ -109,7 +109,7 @@ docker run \
   localstack/localstack
 ```
 
-Create a S3 bucket using AWS CLI and the localstack profile.
+Create an S3 bucket using AWS CLI and the localstack profile.
 
 ```sh
 aws s3 mb s3://quarkus.s3.quickstart --profile localstack --endpoint-url=http://localhost:4566`
@@ -146,13 +146,13 @@ For more information, see:
  - [Set Up AWS Credentials and Region for Development](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/setup-credentials.html)
 
 
-Create a S3 bucket using AWS CLI and the localstack profile.
+Create an S3 bucket using AWS CLI and the localstack profile.
 
 ```sh
 aws s3 mb s3://quarkus.s3.12.345.99`
 ```
 
-**NOTE: Please assure the bucket name you created is unique across AWS S3 and update . 
+**NOTE: Please ensure the bucket name you created is unique across AWS S3 and update it.
 See [Amazon S3 Bucket Naming Requirements](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)**
 
 ## Run demo

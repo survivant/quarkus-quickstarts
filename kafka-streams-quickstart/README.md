@@ -47,8 +47,8 @@ In the tooling container, run _kafkacat_ to examine the results of the streaming
 kafkacat -b kafka:9092 -C -o beginning -q -t temperatures-aggregated
 ```
 
-You also can obtain the current aggregated state for a given weather station using _httpie_,
-which will invoke an Kafka Streams interactive query for that value:
+You can also obtain the current aggregated state for a given weather station using _httpie_,
+which will invoke a Kafka Streams interactive query for that value:
 
 ```bash
 http aggregator:8080/weather-stations/data/1
@@ -158,7 +158,7 @@ For development purposes it can be handy to run the _producer_ and _aggregator_ 
 directly on your local machine instead of via Docker.
 For that purpose, a separate Docker Compose file is provided which just starts Apache Kafka and ZooKeeper, _docker-compose-local.yaml_
 configured to be accessible from your host system.
-Open this file an editor and change the value of the `KAFKA_ADVERTISED_LISTENERS` variable so it contains your host machine's name or ip address.
+Open this file in an editor and change the value of the `KAFKA_ADVERTISED_LISTENERS` variable so it contains your host machine's name or IP address.
 Then run:
 
 ```bash

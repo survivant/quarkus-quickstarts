@@ -2,7 +2,7 @@
 
 This guide demonstrates how your Hibernate ORM application can support multitenancy so that you can serve multiple tenants from a single application.
 
-When serving multiple customers from a same application (e.g.: SaaS), each customer is a tenant with a separate schema in the same database.
+When serving multiple customers from the same application (e.g.: SaaS), each customer is a tenant with a separate schema in the same database.
 
 For the database per tenant approach see [Database Quickstart](../hibernate-orm-multi-tenancy-database-quickstart/README.md).
 

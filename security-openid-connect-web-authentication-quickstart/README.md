@@ -1,6 +1,6 @@
 # Authentication in Web Applications Using OpenID Connect
 
-This is a minimal web application serving a single HTML file and a JAX-RS Resource to serve a HTML content.
+This is a minimal web application serving a single HTML file and a JAX-RS Resource to serve HTML content.
 
 Under the hood, this demo uses:
 
@@ -8,7 +8,7 @@ Under the hood, this demo uses:
 
 The intent here is to demonstrate how you can enable authentication to your web applications using OpenID Connect, so that your users are redirected to your favorite OpenID Connect Provider(OP) to authenticate and, if the authentication is successful, get redirected back to your application.
 
-Once authenticated, the applications establishes a local session based on the information carried by the `ID Token` that was issued by the OP. The session lifetime is tied with the ID Token lifetime, so when the token expires the local session is invalidated and the user is redirected to the OP to (re-)authenticate. Note that the `quarkus-oidc` tries as much as possible to provide a stateless model for your application, where any state related with the user session is based on specific HTTP cookies.
+Once authenticated, the application establishes a local session based on the information carried by the `ID Token` that was issued by the OP. The session lifetime is tied with the ID Token lifetime, so when the token expires the local session is invalidated and the user is redirected to the OP to (re-)authenticate. Note that the `quarkus-oidc` tries as much as possible to provide a stateless model for your application, where any state related with the user session is based on specific HTTP cookies.
 
 ## Requirements
 
@@ -66,11 +66,11 @@ This command will leave Quarkus running in the foreground listening on port 8080
 
 3. If the credentials you provided are valid and you were successfully authenticated, you should be redirected back to the application
 
-4. You should be able to access now the `index.html` resource.
+4. You should now be able to access the `index.html` resource.
 
 5. Visit the `/tokens` endpoint: [http://127.0.0.1:8080/tokens](http://127.0.0.1:8080/tokens).
-    - You should have access to a HTML page that shows information based on the ID Token, Access Token and Refresh Token issued
-    to the application. Where these tokens are available for injection as you can see in the `TokenResource` JAX-RS Resource.
+    - You should have access to an HTML page that shows information based on the ID Token, Access Token and Refresh Token issued
+    to the application. These tokens are available for injection as you can see in the `TokenResource` JAX-RS Resource.
 
 _NOTE:_ Running the tests with, for instance, `mvn package` requires the Keycloak server to be down as it will launch its own one. However, when running the application, make sure it is up with the realm properly configured.
 
